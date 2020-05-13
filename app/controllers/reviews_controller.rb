@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new(review_params)
     @review.restaurant = @restaurant
+    # raise to see the error; valid?, if false errors.messages
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else

@@ -1,1 +1,13 @@
-show.html.erb
+<h1>Reviews</h1>
+
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between">
+        <%= review.content %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New review', new_restaurant_review_path(@restaurant) %>

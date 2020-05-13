@@ -1,1 +1,18 @@
-index.html.erb
+<h1>Restaurant list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <%= render 'card', restaurant: restaurant %>
+    <% end %>
+  </tbody>
+</table>

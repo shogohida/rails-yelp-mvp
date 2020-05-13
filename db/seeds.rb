@@ -10,6 +10,7 @@
   Restaurant.create!(
     name: Faker::Sports::Basketball.team,
     address: Faker::Address.street_address,
-    category: Restaurant::CATEGORIES.sample
+    category: Restaurant::CATEGORIES.sample,
+    # reviews: Faker::Lorem.paragraph
   )
 end
